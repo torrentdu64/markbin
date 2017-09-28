@@ -4,5 +4,5 @@ import App from './components/app';
 
 
 Meteor.startup( () => {
-  ReactDOM.render( <App />, document.querySlector('render-target'));
+  ReactDOM.render( <App />, document.querySelector('.render-target'));
 });
