@@ -5,9 +5,20 @@ import {Bins} from '../../../imports/collections/bins';
 
 
 class BinsList extends Component {
+
+  renderList() {
+    return this.props.bins.map( bin => {
+        return (
+          <li className="list-group-items" key={bin._id} > bin {bin._id}  </li>
+          );
+    });
+  }
+
+
+
   render () {
     return (
-      <div> Bins list </div>
+      <ul className="list-group" > {this.renderList()} </ul>
       );
   }
 }
