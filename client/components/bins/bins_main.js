@@ -14,7 +14,7 @@ class BinsMain extends Component {
 }
 
 export default createContainer((props) => {
-  const { binId } = props.params;
+  const { binId } = props.match.params;
   Meteor.subscribe('bins');
 
   return { bin: Bins.findOne(binId) };
